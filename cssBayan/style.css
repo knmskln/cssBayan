@@ -86,6 +86,10 @@ body {
     height: auto;
 }
 
+.panel img:active {
+    cursor: wait;
+}
+
 .switcher img {
     width: 1em;
     height: auto;
