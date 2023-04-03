@@ -1,0 +1,135 @@
+body {
+    font-family: "Times New Roman", Georgia, serif;
+    background-color: #5f8bc0;
+    color: #222;
+}
+
+.container {
+    max-width: 50em;
+    margin: 6.25em auto;
+}
+
+.container header {
+    text-align: left;
+    padding-left: 0.7em;
+    margin-bottom: 1.2em;
+}
+
+.container .span {
+}
+
+.accordeon .switcher {
+    padding: 0.7em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordeon label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+
+.accordeon .switcher:hover {
+    color: darkred;
+    cursor: alias;
+
+}
+
+.accordeon .panel {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    color: #f0f0f0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+
+.accordeon input[type="checkbox"] {
+    display: none;
+}
+
+.accordeon input[type="checkbox"] + label .close-icon {
+    display: none;
+}
+
+.accordeon input[type="checkbox"] + label .open-icon {
+    display: block;
+}
+
+.accordeon input[type="checkbox"]:checked + label {
+    color: darkred;
+}
+
+.accordeon input[type="checkbox"]:checked + label .close-icon {
+    display: block;
+}
+
+.accordeon input[type="checkbox"]:checked + label .open-icon {
+    display: none;
+}
+
+.accordeon input[type="checkbox"]:checked + label + .panel {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    padding: 1.5em;
+}
+
+.panel img {
+    width: 70%;
+    height: auto;
+}
+
+.panel img:active {
+    cursor: wait;
+}
+
+.switcher img {
+    width: 1em;
+    height: auto;
+}
+
+
+
+@media (max-width: 820px) {
+    .container {
+        width: 90%;
+    }
+    .container header {
+        font-size: 1em;
+    }
+    .accordeon label {
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 820px) {
+    .container {
+        width: 90%;
+    }
+    .container header {
+        font-size: 1.2em;
+    }
+    .accordeon label {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 90%;
+        margin: 2em auto;
+    }
+    .container header {
+        font-size: 0.9em;
+    }
+    .accordeon label {
+        font-size: 1.2em;
+    }
+}
